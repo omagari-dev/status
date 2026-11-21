@@ -1,31 +1,25 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: omagari-dev
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Omagari
+    url: https://app.omagari.org/api/health
+    expectedStatusCodes:
+      - 200
+
+# 서버가 죽으면 Upptime이 이슈를 열고 여기 적힌 사람에게 맡긴다(ADR-0055).
+assignees:
+  - Pancheble
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.omagari.org
+  name: Omagari status
+  introTitle: "**Omagari** hosted server status"
+  introMessage: "Checks [app.omagari.org](https://app.omagari.org) every 5 minutes. When it's down, an issue opens here."
   navbar:
     - title: Status
       href: /
+    - title: Omagari
+      href: https://github.com/omagari-dev/omagari
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
